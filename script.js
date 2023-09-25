@@ -37,7 +37,7 @@ function startGame() {
     startButton.disabled = true;
 
     currentPlayerSpan.textContent = currentPlayer;
-    status.textContent = `-> É a vez de: ${currentPlayer} .`;
+    status.textContent = `-> Eh a vez de: ${currentPlayer} .`;
 
     status.style.display = "block";
     resetButton.style.display = "block";
@@ -75,7 +75,7 @@ function handleCellClick(event) {
         } else {
             currentPlayer = currentPlayer === player1 ? player2 : player1;
             currentPlayerSpan.textContent = currentPlayer;
-            status.textContent = ` -> É a vez de: ${currentPlayer === player1 ? player1 : player2} .`;
+            status.textContent = ` -> Eh a vez de: ${currentPlayer === player1 ? player1 : player2} .`;
         }
     }
 }
@@ -94,17 +94,22 @@ function checkWin() {
 }
 
 function resetGame() {
-    player1Input.disabled = false;
-    player2Input.disabled = false;
-    startButton.disabled = false;
-    player1Input.value = "";
-    player2Input.value = "";
-    board.innerHTML = "";
-    currentPlayerSpan.textContent = "";
-    status.textContent = "";
-    gameActive = false;
-    nameErrorPopup.style.display = "none";
+    // Limpa o tabuleiro, removendo os elementos filhos do elemento "board"
+    while (board.firstChild) {
+        board.removeChild(board.firstChild);
+    }
+
+    // Reinicia as variáveis do jogo
+    gameBoard = ["", "", "", "", "", "", "", "", ""];
+    gameActive = true;
+    currentPlayer = player1;
+    currentPlayerSpan.textContent = currentPlayer;
+    status.textContent = `-> Eh a vez de: ${currentPlayer} .`;
+
+    // Crie um novo tabuleiro
+    createBoard();
 }
+
 
 startButton.addEventListener("click", startGame);
 resetButton.addEventListener("click", resetGame);

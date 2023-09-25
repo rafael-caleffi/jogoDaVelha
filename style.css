@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Minecraft';
-    src: url('Fontes/Minecraft.ttf');
+    font-family: 'a';
+    src: url('Fontes/Starborn.ttf');
     font-weight: normal;
 }
 
 
 * {
-    font-family: 'Minecraft', Arial, Helvetica, sans-serif !important;
+    font-family: 'a', Arial, Helvetica, sans-serif !important;
 }
 
 
@@ -40,7 +40,7 @@ h1 {
 
 .players input {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     text-align: center;
     font-size: 16px;
@@ -55,22 +55,22 @@ h1 {
 
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 125px);
     gap: 4px;
-    width: 306px;
+    width: 380px;
     margin-bottom: 20px;
 }
 
 .board div {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #eee;
     font-size: 24px;
     cursor: pointer;
-    border: 1px solid #ccc; 
+    border: 1px solid #fcfafa; 
 }
 
 #status {
@@ -104,7 +104,7 @@ h1 {
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #fffcfc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 999;
     text-align: center;
