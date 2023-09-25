@@ -43,6 +43,9 @@ function startGame() {
     resetButton.style.display = "block";
 
     createBoard();
+
+    startButton.style.display = "none";
+
 }
 
 function createBoard() {
@@ -94,19 +97,14 @@ function checkWin() {
 }
 
 function resetGame() {
-    // Limpa o tabuleiro, removendo os elementos filhos do elemento "board"
     while (board.firstChild) {
         board.removeChild(board.firstChild);
     }
-
-    // Reinicia as variáveis do jogo
     gameBoard = ["", "", "", "", "", "", "", "", ""];
     gameActive = true;
     currentPlayer = player1;
     currentPlayerSpan.textContent = currentPlayer;
     status.textContent = `-> Eh a vez de: ${currentPlayer} .`;
-
-    // Crie um novo tabuleiro
     createBoard();
 }
 
