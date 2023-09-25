@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da Velha Multiplayer</title>
+</head>
+<body class="filter">
+    <h1>Jogo da Velha Multiplayer</h1>
+    <div class="players">
+        <label for="player1"> ->Jogador 1 (X) :</label>
+        <input type="text" id="player1" placeholder="Nome do jogador 1">
+        <label for="player2"> ->Jogador 2 (O) :</label>
+        <input type="text" id="player2" placeholder="Nome do jogador 2">
+        <button id="start-button">Iniciar Jogo</button>
+    </div>
+    <div class="game" id="game">
+        <div class="board" id="board"></div>
+        <p id="status"> -> É a vez de: <span id="current-player"></span></p>
+        <button id="reset-button">Reiniciar Jogo</button>
+    </div>
+    <div id="nameErrorPopup" class="popup">
+        <p>Os nomes dos jogadores não podem ser iguais.</p>
+        <button id="closePopupButton">Fechar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
