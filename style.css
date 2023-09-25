@@ -4,7 +4,6 @@
     font-weight: normal;
 }
 
-
 * {
     font-family: 'a', Arial, Helvetica, sans-serif !important;
 }
@@ -67,10 +66,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #eee;
-    font-size: 24px;
+    background-color: rgba(250, 250, 250, 0.75); /* Cor de fundo com transparência */
+    font-size: 36px;
     cursor: pointer;
-    border: 1px solid #fcfafa; 
+    border-radius: 10px; /* Bordas arredondadas */
+    color: rgb(0, 0, 0);
+    border: 2px solid #4b80b6;
+    transition: background-color 0.3s; /* Efeito de transição de cor de fundo */
 }
 
 #status {
