@@ -39,6 +39,9 @@ function startGame() {
     currentPlayerSpan.textContent = currentPlayer;
     status.textContent = `-> É a vez de: ${currentPlayer} .`;
 
+    status.style.display = "block";
+    resetButton.style.display = "block";
+
     createBoard();
 }
 
