@@ -70,7 +70,7 @@ h1 {
     background-color: #eee;
     font-size: 24px;
     cursor: pointer;
-    border: 1px solid #ccc; /* Adicionando uma borda para separar os quadrados */
+    border: 1px solid #ccc; 
 }
 
 #status {
